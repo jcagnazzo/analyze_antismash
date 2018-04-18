@@ -31,7 +31,7 @@ def make_fasta_nrps_CDS(SID):
 				feature_type = feature.type
 				locus_tag = feature.qualifiers["locus_tag"][0]
 				translation_seq = feature.qualifiers["translation"][0]
-				file.write(">" + record_id + "-- " + feature_type + "-- " + locus_tag + "\n")
+				file.write(">" + record_id + " " + feature_type + " " + locus_tag + "\n")
 				file.write(translation_seq + "\n")
 	file.close
 
